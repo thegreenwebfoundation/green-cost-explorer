@@ -1,0 +1,201 @@
+{
+  "GroupDefinitions": [{ "Type": "DIMENSION", "Key": "AZ" }],
+  "ResultsByTime": [
+    {
+      "TimePeriod": { "Start": "2018-08-01", "End": "2018-09-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "17.8255087922", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "1937154.28588562", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7440.000281042", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2018-09-01", "End": "2018-10-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "48.8983287463", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "2154080.6260754657", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7190.0002807734", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2018-10-01", "End": "2018-11-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "20.4206957545", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "2445947.3235401735", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7420.000280444", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2018-11-01", "End": "2018-12-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "19.978924281", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "1814378.1539502046", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7190.0002813323", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2018-12-01", "End": "2019-01-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "34.1585442001", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "1684411.5036254297", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7430.0002821231", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2019-01-01", "End": "2019-02-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "37.36420413", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "2197993.842668998", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["eu-west-1c"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0.0061460028", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "0.487778", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7440.0002813093", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2019-02-01", "End": "2019-03-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "39.775277247", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "1828195.742005781", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "6720.0002818529", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2019-03-01", "End": "2019-04-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "41.5273387463", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "2048845.258148988", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7420.0002805496", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    },
+    {
+      "TimePeriod": { "Start": "2019-04-01", "End": "2019-05-01" },
+      "Total": {},
+      "Groups": [
+        {
+          "Keys": ["NoAZ"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "39.1863959454", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "2354656.112510308", "Unit": "N/A" }
+          }
+        },
+        {
+          "Keys": ["us-east-1"],
+          "Metrics": {
+            "BlendedCost": { "Amount": "0", "Unit": "USD" },
+            "UsageQuantity": { "Amount": "7200.0002810375", "Unit": "N/A" }
+          }
+        }
+      ],
+      "Estimated": false
+    }
+  ]
+}

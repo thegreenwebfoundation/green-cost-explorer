@@ -1,0 +1,23 @@
+{
+  "name": "@tgwf/green-cost-explorer",
+  "version": "0.0.1",
+  "description": "How much of your AWS bill is spent on fossil fuels? This helps you find out.",
+  "main": "src/index.js",
+  "dependencies": {
+    "aws-sdk": "^2.503.0",
+    "dotenv": "^8.0.0",
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "tgwf"
+  ],
+  "bin": {
+    "greencost": "bin/cli"
+  },
+  "author": "Chris Adams",
+  "license": "Apache-2.0"
+}
