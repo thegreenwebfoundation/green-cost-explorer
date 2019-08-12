@@ -31,7 +31,6 @@ async function getRawCosts() {
       if (err) {
         reject(err)
       }
-      console.log({ data })
       resolve(data)
     })
   })
@@ -39,18 +38,16 @@ async function getRawCosts() {
 
 async function getAssignedCost(raw) {
   const greenRegions = ['us-west-2','eu-central-1', 'eu-west-1','ca-central-1','us-gov-west-1'];
-  console.log('-------- Raw cost -------');
-  console.log(JSON.stringify(raw, null, 2));
-  console.log('-------- Raw cost -------');
 
-  const greenData = [];
+  let costPerRegion = [];
   raw.ResultsByTime.forEach((result) => {
-    const greenResults = result.Groups
-      .filter((group) => greenRegions.includes(group.Keys[0]));
-    console.log('green result: ', greenResults);
-    greenData.push(greenResults);
+    const costItem = result.Groups.map((data) => {
+      return { region: data.Keys, blendedCost: data.Metrics.BlendedCost.Amount, greenRegion: greenRegions.includes(data.Keys[0])};
+    });
+    costPerRegion = costPerRegion.concat(costItem);
   });
-  return greenData;
+
+  return costPerRegion;
 }
 
 async function runExplorer() {
