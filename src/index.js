@@ -10,8 +10,8 @@ const costExplorer = new AWS.CostExplorer(creds);
 const ceParams = {
   // Start=2018-08-01,End=2019-05-01
   TimePeriod: { /* required */
-    Start: '2019-04-01', /* required */
-    End: '2019-04-02' /* required */
+    Start: '2018-08-01', /* required */
+    End: '2019-05-01' /* required */
   },
   Granularity: "MONTHLY",
   Metrics: [
