@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 'use strict';
-const { getCosts } = require('../src/index')
+const { runExplorer } = require('../src/index')
 
 async function main() {
-  const result = await getCosts()
+  const result = await runExplorer()
   console.log(result)
 }
 main()
