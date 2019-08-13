@@ -1,4 +1,5 @@
 # Green Cost Explorer - climate related spend analysis for AWS
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 If you work in technology, it's reasonable to think that you have some respect for science.
 
@@ -63,3 +64,19 @@ Feel free to use this commercially - part of your job as a professional in tech 
 It's all about tracking your own spend, so it's actually pretty hard to make this something you couldn't use to commercial use
 
 So, Apache 2.0, yo.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://franka.tech"><img src="https://avatars3.githubusercontent.com/u/2796920?v=4" width="100px;" alt="Franka"/><br /><sub><b>Franka</b></sub></a><br /><a href="https://github.com/thegreenwebfoundation/green-cost-explorer/commits?author=vsmart" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
