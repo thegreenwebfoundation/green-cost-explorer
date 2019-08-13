@@ -1,6 +1,15 @@
+const costExplorer = require('./index');
+const rawSampleData = new Map(require('../data/sampledata.json'));
+
 describe("GreenCost", () => {
   describe("ReshapeforChart", () => {
-    test.todo("splits results into green and grey buckets")
+    test("splits results into green and grey buckets", async () => {
+
+      const result = await costExplorer.getTotalCost(rawSampleData);
+      const expected = { greenCost: "146.66", greyCost: "152.48", greenPercent: "49.0", greyPercent: "51.0" };
+      expect(result).toEqual(expected);
+    });
+
     test.todo("it totals up spend by month, comparing green vs grey spend")
     test.todo("it gives a percentage each month, and in total of spend on green vs grey regions")
   })
