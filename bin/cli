@@ -5,6 +5,5 @@ const { runExplorer } = require('../src/index')
 
 async function main() {
   const result = await runExplorer()
-  console.log(result)
 }
 main()
