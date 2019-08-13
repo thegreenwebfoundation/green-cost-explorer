@@ -1,5 +1,7 @@
 const AWS = require("aws-sdk")
 require('dotenv').config();
+const Table = require('cli-table');
+const colors = require('colors');
 
 const creds = {
   apiVersion: '2017-10-25',
@@ -129,9 +131,23 @@ async function getAssignedCost(raw) {
   return groupedCost;
 }
 
+function printData(costObject) {
+  const table = new Table({
+        head: ['Green Cost'.green, 'Grey Cost'.red],
+        colWidths: [30, 30]
+  });
+
+  table.push([`${costObject.greenPercent}% ($${costObject.greenCost})`,
+`${costObject.greyPercent}% ($${costObject.greyCost})`]);
+
+  console.log(table.toString());
+}
+
 async function runExplorer() {
   const rawCost = await getRawCosts();
   const assignedCost = await getAssignedCost(rawCost);
+  const total = getTotalCost(assignedCost);
+  printData(total);
   return assignedCost;
 }
 
