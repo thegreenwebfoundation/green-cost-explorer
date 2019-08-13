@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "vsmart",
+      "name": "Franka",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2796920?v=4",
+      "profile": "https://franka.tech",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "green-cost-explorer",
+  "projectOwner": "thegreenwebfoundation",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
