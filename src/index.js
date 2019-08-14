@@ -43,7 +43,19 @@ function mapToJson(map) {
     return JSON.stringify([...map]);
 }
 
-/** Given the output of `getAssignedCost` (see sampledata.json for a sample)
+/** Given the output of `getAssignedCost`
+ *  returns green vs grey cost by month.
+ *  Such as:
+ *  [
+ *    { greenCost: 123, greyCost: 123, greenPercent: 20, greyPercent: 80, month: 'August 2018' },
+ *    { greenCost: 123, greyCost: 123, greenPercent: 20, greyPercent: 80, month: 'September 2018' }
+ *  ]
+ */
+function getCostByMonth(groupedCost) {
+
+}
+
+/** Given the output of `getAssignedCost`
  *  returns green vs grey cost.
  *  Such as:
  *  { greenCost: 123, greyCost: 123, greenPercent: 20, greyPercent: 80 }
@@ -91,8 +103,8 @@ function getTotalCost(groupedCost) {
 }
 
 /**
- * Given the raw output of CostExplorer.getCostAndUsage(), decorates the data with `greenRegion: true/false` and returns a map with result sets by region.
- * Such as:
+ * Given the raw output of CostExplorer.getCostAndUsage(), decorates the data with `greenRegion: true/false` and returns a map with result sets by a given key.
+ * E.g. summing by "region":
  * {
  *   'us-east-1' => [ {region: 'us-east-1'}, greenRegion: false, blendedCost: 1, month: '2018-08-01'},
  *                    {region: 'us-east-1'}, greenRegion: false, blendedCost: 2, month: '2018-09-01'}],
@@ -100,11 +112,10 @@ function getTotalCost(groupedCost) {
  *   ]
  * }
  */
-function sumByRegion(costArray) {
-  // Group by region
+function sumByKey(costArray, key) {
   const groupedCost = new Map();
   costArray.forEach((item) => {
-    const key = item.region;
+    const key = item.key;
     const collection = groupedCost.get(key);
     if (!collection) {
       groupedCost.set(key, [item]);
@@ -157,11 +168,13 @@ function printData(costObject) {
 async function runExplorer() {
   const rawCost = await getRawCosts();
   const assignedCost = await getAssignedCost(rawCost);
-  const groupedCost = sumByRegion(costPerRegion);
-  const costByMonth = getCostByMonth(groupedCost);
-  const total = getTotalCost(assignedCost);
+  const groupedByRegion = sumByKey(assignedCost, 'region');
+  const groupedByMonth = sumByKey(assignedCost, 'month');
+  const total = getTotalCost(groupedByRegion);
+  const costByMonth = getCostByMonth(groupedByMonth);
+
   printData(total);
-  printData(costyByMonth);
+//  printData(costByMonth);
 }
 
 module.exports = {
