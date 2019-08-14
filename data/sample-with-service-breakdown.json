@@ -1,0 +1,2962 @@
+{
+	"GroupDefinitions": [{
+		"Type": "DIMENSION",
+		"Key": "REGION"
+	}, {
+		"Type": "DIMENSION",
+		"Key": "SERVICE"
+	}],
+	"ResultsByTime": [{
+		"TimePeriod": {
+			"Start": "2018-08-01",
+			"End": "2018-09-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.95",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0122700696",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "771.0810519231",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0328348683",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "2255.1772604034",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1309880447",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "5345.8899496009",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1107939822",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7200.7270998629",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0130896275",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1820.1326220889",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "469",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.000583013",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11747.1893570809",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "10.9094771429",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1684196.5644539983",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0105630311",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.6286825611",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "45568.7631095763",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0022726705",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "392.0163842828",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.5226372",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "56598",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0759016452",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "2544.2812553699",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "755",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.3984457844",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "26171.3808886291",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7440.000281042",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0375321828",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "91318.0724498128",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.9994399594",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2018-09-01",
+			"End": "2018-10-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "8.14",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0094429441",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1230.0698960022",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0781418866",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "3173.4372993329",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1292045",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "8430.8509707096",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.084112941",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "6083.6711455292",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0400851605",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "3099.4351609719",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "456",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0005088224",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11365.5883922039",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0026377776",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "315.0205441369",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "12.0178931411",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1926784.587034707",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0098374823",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "1.363340662",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "53085.2940583867",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0086618515",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "699.0713859365",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Registrar"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "24",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "2",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.5208324",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "52086",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0967758302",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "2648.3638482768",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "780",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.3841095683",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "29965.1674812989",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7190.0002807734",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.022581261",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "53875.0594834463",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.9995370444",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2018-10-01",
+			"End": "2018-11-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "3.26",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0178581807",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1375.142221759",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.069368104",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "2927.3874588488",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1467733605",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "9497.9676040074",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0841571288",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "5728.675447183",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0364505234",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "3939.3825296654",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "472",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0005075248",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11744.0890750221",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.01299876",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1043.1067985231",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "12.2506126119",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1875167.582837246",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0103275861",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "1.2962057781",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "63068.3608694716",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.012791889",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "906.1064335471",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.5239124",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "59786",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.101310261",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "3357.3757834261",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "772",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.4589490429",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "36602.9697343223",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7420.000280444",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1488001894",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "369545.1678756627",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.9985439028",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-west-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-west-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2018-11-01",
+			"End": "2018-12-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "3.19",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0095367232",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "464.0788817841",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0264118597",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "609.1511109388",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0504397159",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "2696.3376829768",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.019634431",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1313.1578410669",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0206288666",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1363.2266954932",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "455",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0004863786",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11366.189517648",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0066382071",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "336.0566927894",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "12.7259836443",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1602328.392821128",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0098947367",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.8381592977",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "30498.431422943",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0054444963",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "294.0462963329",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.52378",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "59455",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0889302925",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "858.348237961",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "869",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.3041933852",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "14755.4059074756",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7190.0002813323",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon EC2 Container Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.133",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "5.2500086476",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0356569829",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "86710.0709372633",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1.0000010194",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2018-12-01",
+			"End": "2019-01-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "5.44",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0069272653",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "472.0558233811",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0181604261",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "729.1017436828",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0430684506",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1869.2918689364",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0113870445",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "880.0902433757",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0045968102",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "443.0488683546",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "469",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0005755481",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11744.4259497734",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0089056472",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "113.0797386071",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "10.9121432678",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1364475.3644040672",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0104102131",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.6962407373",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "20019.909755884",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0032293307",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "113.0281248269",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.5247104",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "61781",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0078315816",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "312.0286791261",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1026",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.2601094135",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "10147.9417666286",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7430.0002821231",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon EC2 Container Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "14.1360018709",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "558.0130162554",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0846564063",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "209257.1116489705",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1.0015833468",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2019-01-01",
+			"End": "2019-02-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "5.94",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "4",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0017585039",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "132.0140491583",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "4",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "4",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0187114106",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "439.1070212402",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "4",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0259459868",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "986.1770999055",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "4",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0104833495",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "757.0836587624",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "4",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0028017015",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "332.0290994196",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "654",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Key Management Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "10",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0004546203",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11744.9585825573",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0008736407",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "75.0071294633",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Lightsail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "4.1260800019",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "614.693863061",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "14.7123798517",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1969993.4885687872",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0102540297",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-north-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "44",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.5805555395",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "17767.5819864765",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "EC2 - Other"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0008707538",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0079235924",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon Elastic Compute Cloud - Compute"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0061460028",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.4887865022",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "5",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0013709808",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "189.0107180311",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "269",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "AWS Key Management Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "Amazon Lightsail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "614.5277057308",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.5233028",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "58262",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0044843623",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "210.0162166468",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1403",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1802377753",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7627.0321208963",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7440.0002813093",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon EC2 Container Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "9.1828209204",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "558.0105722311",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.051071931",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "125270.0841794152",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1.0009110908",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "5",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-west-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "4",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2019-02-01",
+			"End": "2019-03-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "6.36",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0004696778",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "55.0035515572",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0360401384",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "195.2106649284",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0259593927",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "668.1799277984",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0079906092",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "416.0655441462",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0045214899",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "122.051761642",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "834",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Key Management Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0001125469",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "10646.6131698201",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0012118735",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "59.0103788525",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Lightsail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "4.51584",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "672.409015935",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "14.3585086237",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1650905.7059266316",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0091799466",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.7617620938",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "17652.715353231",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0038764628",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "127.0340869539",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "Amazon Lightsail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.6602",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "672.6942633791",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.5202352",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "50593",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0242242716",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "264.094974688",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "988",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1645005158",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "6048.8650590168",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "6720.0002818529",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon EC2 Container Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "8.2941625623",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "504.0080424776",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0356617886",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "86768.0711251193",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.9999796572",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2019-03-01",
+			"End": "2019-04-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "6.62",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0006128665",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "49.0048891831",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0260086165",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "259.1512059818",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0286247736",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "728.1984905226",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0088243442",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "523.0716718777",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0038994555",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "144.0441877091",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1759",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Key Management Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "8",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0000247773",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11854.652555829",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0037216767",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "50.0332879713",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Lightsail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "5.0069313896",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "746.1523365588",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "15.8462677012",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1838458.697953545",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0103036427",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-north-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "24",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.7497963824",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "16027.5983503804",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0012936324",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "57.0111493877",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "139",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "Amazon Lightsail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "1.2846202646",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "273.455637555",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "2.5235844",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "58966",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "32",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0171668846",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "269.0664851404",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "845",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.1778668638",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "6156.021048398",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7420.0002805496",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon EC2 Container Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "9.1828202271",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "558.0103629885",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0452744903",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "110555.0787576439",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.9994746729",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-west-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "32",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-west-2", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "33",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}, {
+		"TimePeriod": {
+			"Start": "2019-04-01",
+			"End": "2019-05-01"
+		},
+		"Total": {},
+		"Groups": [{
+			"Keys": ["NoRegion", "Tax"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "6.26",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-northeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0048057563",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "55.0415820734",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-south-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0027152578",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "116.0151744583",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0239205618",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "593.1658811501",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ap-southeast-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0061814999",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "413.0497013056",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["ca-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0012306785",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "109.0131962115",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1298",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AWS Lambda"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "11470.15",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0003544732",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "42.0027806648",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Lightsail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "4.8384",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "720.4375885728",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "16.3606419706",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "2127559.2278357954",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-central-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.0102918114",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.9920091345",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "15617.4526909851",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-2", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0002465931",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "31.0019090307",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["eu-west-3", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["global", "Amazon Route 53"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "1.5250872",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "62721",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["sa-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0279337882",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "311.1094975634",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AWS CloudTrail"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "1012",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon CloudFront"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.2049064049",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "6083.3397224064",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon DynamoDB"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "7200.0002810375",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon EC2 Container Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "8.8866002368",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "540.0112052291",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "Amazon Simple Storage Service"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0.0513623898",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "125962.0841904794",
+					"Unit": "N/A"
+				}
+			}
+		}, {
+			"Keys": ["us-east-1", "AmazonCloudWatch"],
+			"Metrics": {
+				"BlendedCost": {
+					"Amount": "0",
+					"Unit": "USD"
+				},
+				"UsageQuantity": {
+					"Amount": "0.9992625707",
+					"Unit": "N/A"
+				}
+			}
+		}],
+		"Estimated": false
+	}]
+}
