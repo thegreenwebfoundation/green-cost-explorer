@@ -14,7 +14,7 @@ const ceParams = {
   // Start=2018-08-01,End=2019-05-01
   TimePeriod: { /* required */
     Start: '2018-08-01', /* required */
-    End: '2018-10-01' /* required */
+    End: '2019-05-01' /* required */
   },
   Granularity: 'MONTHLY',
   Metrics: [
