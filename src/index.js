@@ -1,4 +1,4 @@
-const AWS = require("aws-sdk")
+const AWS = require('aws-sdk')
 require('dotenv').config();
 const Table = require('cli-table');
 const colors = require('colors');
@@ -14,16 +14,20 @@ const ceParams = {
   // Start=2018-08-01,End=2019-05-01
   TimePeriod: { /* required */
     Start: '2018-08-01', /* required */
-    End: '2019-05-01' /* required */
+    End: '2018-10-01' /* required */
   },
-  Granularity: "MONTHLY",
+  Granularity: 'MONTHLY',
   Metrics: [
-    "BlendedCost",
-    "UsageQuantity"
+    'BlendedCost',
+    'UsageQuantity'
   ],
   GroupBy: [{
     Key: 'REGION',
-    Type: "DIMENSION"
+    Type: 'DIMENSION'
+  },
+  {
+     Key: 'SERVICE',
+    Type: 'DIMENSION'
   }]
 }
 
@@ -103,7 +107,7 @@ function aggregateTotalCost(cost) {
 
 /**
  * Given the raw output of CostExplorer.getCostAndUsage(), decorates the data with `greenRegion: true/false` and returns a map with result sets by a given key.
- * E.g. summing by key "region":
+ * E.g. summing by key 'region':
  * {
  *   'us-east-1' => [ {region: 'us-east-1'}, greenRegion: false, blendedCost: 1, month: '2018-08-01'},
  *                    {region: 'us-east-1'}, greenRegion: false, blendedCost: 2, month: '2018-09-01'}],
@@ -143,7 +147,7 @@ async function getAssignedCost(raw) {
 
     const month = (result.TimePeriod ? result.TimePeriod.Start : 'n/a');
     const costItem = result.Groups.map((data) => {
-      return { region: data.Keys[0], blendedCost: Number.parseFloat(data.Metrics.BlendedCost.Amount), greenRegion: greenRegions.includes(data.Keys[0]), month: month};
+      return { region: data.Keys[0], blendedCost: Number.parseFloat(data.Metrics.BlendedCost.Amount), greenRegion: greenRegions.includes(data.Keys[0]), month: month, service: data.Keys[1]};
     });
 
     costPerRegion = costPerRegion.concat(costItem);
@@ -181,16 +185,21 @@ function printDataByKey(costObject, key) {
 async function runExplorer() {
   const rawCost = await getRawCosts();
   const assignedCost = await getAssignedCost(rawCost);
+
+
   const groupedByRegion = sumByKey(assignedCost, 'region');
   const groupedByMonth = sumByKey(assignedCost, 'month');
+  const groupedByService = sumByKey(assignedCost, 'service');
 
   const costMap = calculateGreenPortions(groupedByRegion);
   const total = aggregateTotalCost(costMap);
 
   const costByMonth = calculateGreenPortions(groupedByMonth);
+  const costByService = calculateGreenPortions(groupedByService);
 
   printData(total);
   printDataByKey(costByMonth, 'month');
+  printDataByKey(costByService, 'service');
 }
 
 module.exports = {
