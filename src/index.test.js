@@ -3,7 +3,12 @@ const rawSampleData = new Map(require('../data/sampledata.json'));
 
 describe("GreenCost", () => {
   describe("ReshapeforChart", () => {
-    test("splits results into green and grey buckets", async () => {
+
+    test.todo("[index] getRawCost: fetches raw cost data from AWS CostExplorer");
+    test.todo("[index] getAssignedCost: assigns cost by region");
+    test.todo("[index] sumByRegion: sums total cost by region");
+
+    test("[index] getTotalCost: splits results into green and grey buckets", async () => {
 
       const result = await costExplorer.getTotalCost(rawSampleData);
       const expected = { greenCost: "146.66", greyCost: "152.48", greenPercent: "49.0", greyPercent: "51.0" };

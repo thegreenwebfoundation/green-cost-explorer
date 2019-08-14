@@ -90,6 +90,16 @@ function getTotalCost(groupedCost) {
   return { greenCost: totalGreenCost.toFixed(2), greyCost: totalGreyCost.toFixed(2), greenPercent: greenPercent.toFixed(1), greyPercent: greyPercent.toFixed(1) };
 }
 
+/**
+ * Given the raw output of CostExplorer.getCostAndUsage(), decorates the data with `greenRegion: true/false` and returns a map with result sets by region.
+ * Such as:
+ * {
+ *   'us-east-1' => [ {region: 'us-east-1'}, greenRegion: false, blendedCost: 1, month: '2018-08-01'},
+ *                    {region: 'us-east-1'}, greenRegion: false, blendedCost: 2, month: '2018-09-01'}],
+ *   'eu-west-1' => [ {region: 'eu-west-'}, greenRegion: true, blendedCost: 1, month: '2018-08-01'},
+ *   ]
+ * }
+ */
 function sumByRegion(costArray) {
   // Group by region
   const groupedCost = new Map();
@@ -107,28 +117,29 @@ function sumByRegion(costArray) {
 }
 
 /**
- * Given the raw output of CostExplorer.getCostAndUsage(), decorates the data with `greenRegion: true/false` and returns a map with result sets by region.
+ *
+ * Returns an array of cost entries given the raw data from CostExplorer.getCostandUsage()
  * Such as:
- * {
- *   'us-east-1' => [ {region: 'us-east-1'}, greenRegion: false, blendedCost: 1},
- *                    {region: 'us-east-1'}, greenRegion: false, blendedCost: 2}],
- *   'eu-west-1' => [ {region: 'eu-west-'}, greenRegion: true, blendedCost: 1},
- *   ]
- * }
+ * [
+ *   { region: 'us-east-1', blendedCost: 123.45, greenRegion: false, month: '2018-08-01'},
+ *   { region: 'eu-west-1', blendedCost: 123.45, greenRegion: true, month: '2018-08-01'}
+ * ]
  */
 async function getAssignedCost(raw) {
   const greenRegions = ['us-west-2','eu-central-1', 'eu-west-1','ca-central-1','us-gov-west-1'];
 
   let costPerRegion = [];
   raw.ResultsByTime.forEach((result) => {
+
+    const month = (result.TimePeriod ? result.TimePeriod.Start : 'n/a');
     const costItem = result.Groups.map((data) => {
-      return { region: data.Keys[0], blendedCost: Number.parseFloat(data.Metrics.BlendedCost.Amount), greenRegion: greenRegions.includes(data.Keys[0])};
+      return { region: data.Keys[0], blendedCost: Number.parseFloat(data.Metrics.BlendedCost.Amount), greenRegion: greenRegions.includes(data.Keys[0]), month: month};
     });
+
     costPerRegion = costPerRegion.concat(costItem);
   });
 
-  const groupedCost = sumByRegion(costPerRegion);
-  return groupedCost;
+  return costPerRegion;
 }
 
 function printData(costObject) {
@@ -146,9 +157,11 @@ function printData(costObject) {
 async function runExplorer() {
   const rawCost = await getRawCosts();
   const assignedCost = await getAssignedCost(rawCost);
+  const groupedCost = sumByRegion(costPerRegion);
+  const costByMonth = getCostByMonth(groupedCost);
   const total = getTotalCost(assignedCost);
   printData(total);
-  return assignedCost;
+  printData(costyByMonth);
 }
 
 module.exports = {
