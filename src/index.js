@@ -43,28 +43,17 @@ function mapToJson(map) {
     return JSON.stringify([...map]);
 }
 
-/** Given the output of `getAssignedCost`
- *  returns green vs grey cost by month.
- *  Such as:
- *  [
- *    { greenCost: 123, greyCost: 123, greenPercent: 20, greyPercent: 80, month: 'August 2018' },
- *    { greenCost: 123, greyCost: 123, greenPercent: 20, greyPercent: 80, month: 'September 2018' }
- *  ]
+/** Calculates green vs grey cost for an object sorted by key..
+ *  Such as for a map sorted by key 'region', it will decorate with greenPercent and greyPercent:
+ *  {
+ *    'us-east-1': { greenCost: 123, greyCost: 123, greenPercent: 20, greyPercent: 80 }
+ *  }
  */
-function getCostByMonth(groupedCost) {
-
-}
-
-/** Given the output of `getAssignedCost`
- *  returns green vs grey cost.
- *  Such as:
- *  { greenCost: 123, greyCost: 123, greenPercent: 20, greyPercent: 80 }
- */
-function getTotalCost(groupedCost) {
+function calculateGreenPortions(costMap) {
 
   const costPerRegion = {};
 
-  for (const [key, value] of groupedCost.entries()) {
+  for (const [key, value] of costMap.entries()) {
 
     const greenReducer = (accumulator, currentValue) => {
       if (currentValue.greenRegion) {
@@ -85,26 +74,36 @@ function getTotalCost(groupedCost) {
     const greenSum = value.reduce(greenReducer, 0);
     const greySum = value.reduce(grayReducer, 0);
 
-    costPerRegion[key] = { greenCost: greenSum, greyCost: greySum};
+    const greenPercent = greenSum / (greySum + greenSum) * 100;
+    const greyPercent = 100 - greenPercent;
+
+    costPerRegion[key] = { greenCost: greenSum, greyCost: greySum, greenPercent: greenPercent, greyPercent: greyPercent };
   };
+  return costPerRegion;
+}
 
-  let totalGreenCost = 0;
-  let totalGreyCost = 0;
+/**
+ * Aggregates an object of key => cost mappings into a single line of cost items.
+ */
+function aggregateTotalCost(cost) {
 
-  Object.values(costPerRegion).forEach((region) => {
-    totalGreenCost = totalGreenCost + region.greenCost;
-    totalGreyCost = totalGreyCost + region.greyCost;
+  let totalGreenSum = 0;
+  let totalGreySum = 0;
+
+  Object.values(cost).forEach((item) => {
+    totalGreenSum = totalGreenSum + item.greenCost;
+    totalGreySum = totalGreySum + item.greyCost;
   })
 
-  const greenPercent = totalGreenCost / (totalGreyCost + totalGreenCost) * 100;
+  const greenPercent = totalGreenSum / (totalGreySum + totalGreenSum) * 100;
   const greyPercent = 100 - greenPercent;
 
-  return { greenCost: totalGreenCost.toFixed(2), greyCost: totalGreyCost.toFixed(2), greenPercent: greenPercent.toFixed(1), greyPercent: greyPercent.toFixed(1) };
+  return { greenCost: totalGreenSum.toFixed(2), greyCost: totalGreySum.toFixed(2), greenPercent: greenPercent.toFixed(1), greyPercent: greyPercent.toFixed(1) };
 }
 
 /**
  * Given the raw output of CostExplorer.getCostAndUsage(), decorates the data with `greenRegion: true/false` and returns a map with result sets by a given key.
- * E.g. summing by "region":
+ * E.g. summing by key "region":
  * {
  *   'us-east-1' => [ {region: 'us-east-1'}, greenRegion: false, blendedCost: 1, month: '2018-08-01'},
  *                    {region: 'us-east-1'}, greenRegion: false, blendedCost: 2, month: '2018-09-01'}],
@@ -112,10 +111,10 @@ function getTotalCost(groupedCost) {
  *   ]
  * }
  */
-function sumByKey(costArray, key) {
+function sumByKey(costArray, sumBy) {
   const groupedCost = new Map();
   costArray.forEach((item) => {
-    const key = item.key;
+    const key = item[sumBy];
     const collection = groupedCost.get(key);
     if (!collection) {
       groupedCost.set(key, [item]);
@@ -155,7 +154,7 @@ async function getAssignedCost(raw) {
 
 function printData(costObject) {
   const table = new Table({
-        head: ['Green Cost'.green, 'Grey Cost'.red],
+        head: ['Total Green Cost'.green, 'Total Grey Cost'.red],
         colWidths: [30, 30]
   });
 
@@ -165,21 +164,38 @@ function printData(costObject) {
   console.log(table.toString());
 }
 
+function printDataByKey(costObject, key) {
+  const table = new Table({
+        head: [`${key}`.white, `Green Cost by ${key}`.green, `Grey Cost by ${key}`.red],
+        colWidths: [30, 30, 30]
+  });
+
+  Object.entries(costObject).forEach(([key, item]) => {
+    table.push([`${key}`, `${item.greenPercent.toFixed(1)}% ($${item.greenCost.toFixed(2)})`,
+                `${item.greyPercent.toFixed(1)}% ($${item.greyCost.toFixed(2)})`]);
+  });
+
+  console.log(table.toString());
+}
+
 async function runExplorer() {
   const rawCost = await getRawCosts();
   const assignedCost = await getAssignedCost(rawCost);
   const groupedByRegion = sumByKey(assignedCost, 'region');
   const groupedByMonth = sumByKey(assignedCost, 'month');
-  const total = getTotalCost(groupedByRegion);
-  const costByMonth = getCostByMonth(groupedByMonth);
+
+  const costMap = calculateGreenPortions(groupedByRegion);
+  const total = aggregateTotalCost(costMap);
+
+  const costByMonth = calculateGreenPortions(groupedByMonth);
 
   printData(total);
-//  printData(costByMonth);
+  printDataByKey(costByMonth, 'month');
 }
 
 module.exports = {
   getRawCosts,
   getAssignedCost,
-  getTotalCost,
+  aggregateTotalCost,
   runExplorer
 }
