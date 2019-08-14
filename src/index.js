@@ -120,6 +120,7 @@ function sumByKey(costArray, sumBy) {
   costArray.forEach((item) => {
     const key = item[sumBy];
     const collection = groupedCost.get(key);
+    if (item.blendedCost === 0) return;
     if (!collection) {
       groupedCost.set(key, [item]);
     } else {
@@ -184,8 +185,8 @@ function printDataByKey(costObject, key) {
 
 async function runExplorer() {
   const rawCost = await getRawCosts();
-  const assignedCost = await getAssignedCost(rawCost);
 
+  const assignedCost = await getAssignedCost(rawCost);
 
   const groupedByRegion = sumByKey(assignedCost, 'region');
   const groupedByMonth = sumByKey(assignedCost, 'month');
