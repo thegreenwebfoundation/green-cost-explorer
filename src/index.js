@@ -157,6 +157,29 @@ async function getAssignedCost(raw) {
   return costPerRegion;
 }
 
+/**
+ * Sorts a cost object by a given key.
+ * Create an array, sort the array, then transform back into an object.
+ *
+ */
+function sortBy(costObject, key) {
+  const sortedCostArray = [];
+  const sortedCostObject = {};
+
+  Object.entries(costObject).forEach(([k, v]) => {
+     sortedCostArray.push([k, v]);
+  });
+
+  sortedCostArray.sort(function(a, b) {
+        return b[1][key] - a[1][key];
+  });
+
+  sortedCostArray.forEach(([k, v]) => {
+    sortedCostObject[k] = v;
+  });
+  return sortedCostObject;
+}
+
 function printData(costObject) {
   const table = new Table({
         head: ['Total Green Cost'.green, 'Total Grey Cost'.red],
@@ -197,10 +220,11 @@ async function runExplorer() {
 
   const costByMonth = calculateGreenPortions(groupedByMonth);
   const costByService = calculateGreenPortions(groupedByService);
+  const sortedCostByService = sortBy(costByService, 'greenCost');
 
   printData(total);
   printDataByKey(costByMonth, 'month');
-  printDataByKey(costByService, 'service');
+  printDataByKey(sortedCostByService, 'service');
 }
 
 module.exports = {
