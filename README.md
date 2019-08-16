@@ -16,16 +16,16 @@ You can also just look at this nice cartoon. The ones which are notionally susta
 
 ### What this does
 
-TODO
+TODO:
 
-- Sort your monthly spend into green vs grey spend
-- Create a basic table showing this
-- Show this as a chart
-- Project forward, using AWS's cost projection features
+- [x] Sort your monthly spend into green vs grey spend
+- [x] Create a basic table showing this
+- [ ] Show this as a chart
+- [ ] Project forward, using AWS's cost projection features, to help you see these against your own commmitments
 
 ### Usage
 
-This is a wrapper around the AWS NodeJS SDK, and because of this, you need to set following environment variables to get results back:
+This is a wrapper around the AWS NodeJS SDK, so by default, it looks for creds in your environment the way the AWS NodeJS normally does. However, you can also set following the environment variables to override these to try it out.
 
 ```
 AWS_ACCESS_KEY_ID='YOUR_KEY_ID'
@@ -42,26 +42,48 @@ It looks for the AWS credentials in your environment, but if you're not comforta
 npx greencost
 ```
 
-If all goes well (ahem, and [once the table output has actually been implemented…][issue-1]), you'll get something like this:
-
-[issue-1]: https://github.com/thegreenwebfoundation/green-cost-explorer/issues/1
+If all goes well, you'll get something like this (sample data below):
 
 ```
-|          | Grey   | Green  |
------------|--------|--------|
-|Aug  2018 |  40%   |  60%   |
-|Sept 2018 |  40%   |  60%   |
-|Oct  2018 |  40%   |  60%   |
-|Nov  2018 |  40%   |  60%   |
-|Dec  2018 |  40%   |  60%   |
-
+┌──────────────────────────────┬──────────────────────────────┐
+│ Total Green Cost             │ Total Grey Cost              │
+├──────────────────────────────┼──────────────────────────────┤
+│ 49.0% ($146.66)              │ 51.0% ($152.48)              │
+└──────────────────────────────┴──────────────────────────────┘
+┌──────────────────────────────┬──────────────────────────────┬──────────────────────────────┐
+│ month                        │ Green Cost by month          │ Grey Cost by month           │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2018-08-01                   │ 64.8% ($11.55)               │ 35.2% ($6.27)                │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2018-09-01                   │ 27.5% ($13.42)               │ 72.5% ($35.47)               │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2018-10-01                   │ 66.6% ($13.60)               │ 33.4% ($6.82)                │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2018-11-01                   │ 68.0% ($13.59)               │ 32.0% ($6.39)                │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2018-12-01                   │ 34.0% ($11.62)               │ 66.0% ($22.54)               │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2019-01-01                   │ 52.0% ($19.43)               │ 48.0% ($17.94)               │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2019-02-01                   │ 49.4% ($19.64)               │ 50.6% ($20.13)               │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2019-03-01                   │ 52.0% ($21.61)               │ 48.0% ($19.92)               │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│ 2019-04-01                   │ 56.6% ($22.19)               │ 43.4% ($16.99)               │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
 ```
+
+There are also flags to let you see a breakdown by service as well.
+
 
 ### Licensing
 
-Feel free to use this commercially - part of your job as a professional in tech is to avoid unnecessary harm, and burning fossil fuels, objectively causes harm, and is totally avoidable, by either switching regions, or using a different provider.
+Feel free to use this commercially - part of your job as a professional in tech is to avoid unnecessary harm, and burning fossil fuels to run our infrastructure:
 
-It's all about tracking your own spend, so it's actually pretty hard to make this something you couldn't use to commercial use
+- objectively causes harm
+- is avoidable, by either switching regions, or using a different provider, or contacting AWS about offsetting the emissions from running infra in their non-sustainable regions.
+
+To be honest, given this is all about tracking your own spend, so it's actually pretty hard to make this something you _couldn't use_ for commercial use.
 
 So, Apache 2.0, yo.
 
