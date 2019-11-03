@@ -10,11 +10,16 @@ const creds = {
 
 const costExplorer = new AWS.CostExplorer(creds);
 
+// AWS Cost Explorer API doesn't track data for more than 1 year
+const now = new Date()
+const endDate = now.toISOString().slice(0, 10)
+now.setYear(now.getFullYear() - 1)
+const startDate = now.toISOString().slice(0, 10)
+
 const ceParams = {
-  // Start=2018-08-01,End=2019-05-01
-  TimePeriod: { /* required */
-    Start: '2018-08-01', /* required */
-    End: '2019-05-01' /* required */
+  TimePeriod: {
+    Start: startDate,
+    End: endDate
   },
   Granularity: 'MONTHLY',
   Metrics: [
