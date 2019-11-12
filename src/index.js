@@ -36,6 +36,10 @@ const ceParams = {
   }]
 }
 
+const nonInfrastructureCosts = [
+  'Tax', 'AWS Support (Business)'
+]
+
 // give us an awaitable function
 async function getRawCosts() {
   return new Promise(function (resolve, reject) {
@@ -62,10 +66,15 @@ function calculateGreenPortions(costMap) {
 
   const costPerRegion = {};
 
-  for (const [key, value] of costMap.entries()) {
 
+  for (const [key, value] of costMap.entries()) {
+    if (nonInfrastructureCosts.includes(key)) {
+      continue
+    }
     const greenReducer = (accumulator, currentValue) => {
-      if (currentValue.greenRegion) {
+      if (nonInfrastructureCosts.includes(currentValue.service)) {
+        return accumulator
+      } else if (currentValue.greenRegion) {
         return (accumulator + currentValue.blendedCost);
       } else {
         return accumulator;
@@ -73,7 +82,9 @@ function calculateGreenPortions(costMap) {
     };
 
     const grayReducer = (accumulator, currentValue) => {
-     if (!currentValue.greenRegion) {
+      if (nonInfrastructureCosts.includes(currentValue.service)) {
+        return accumulator
+      } else if (!currentValue.greenRegion) {
         return (accumulator + currentValue.blendedCost);
       } else {
         return accumulator;

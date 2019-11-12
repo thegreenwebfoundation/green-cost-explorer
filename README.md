@@ -75,6 +75,8 @@ If all goes well, you'll get something like this (sample data below):
 
 There are also flags to let you see a breakdown by service as well.
 
+Note: Only infrastructure costs are taken into consideration. Non-infrastructure global costs like Taxes are ignored.
+
 
 ### Licensing
 
