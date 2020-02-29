@@ -1,5 +1,14 @@
+// const fsPromise = require('fspromises')
+const fs = require('fs')
+const path = require('path');
+
 const costExplorer = require('./index');
-const rawSampleData = new Map(require('../data/sampledata.json'));
+
+
+
+// const rawSampleData = fsPromises.readFile('../data/sample-with-service-breakdown.json');
+const rawSampleData = JSON.parse(fs.readFileSync(
+  path.resolve(__dirname, '../data/sample-with-service-breakdown.json'), 'utf8'));
 
 describe("GreenCost", () => {
   describe("ReshapeforChart", () => {
@@ -10,9 +19,12 @@ describe("GreenCost", () => {
 
     test("[index] getTotalCost: splits results into green and grey buckets", async () => {
 
-      const result = await costExplorer.getTotalCost(rawSampleData);
-      const expected = { greenCost: "146.66", greyCost: "152.48", greenPercent: "49.0", greyPercent: "51.0" };
-      expect(result).toEqual(expected);
+
+      // const assignedCost = await costExplorer.getAssignedCost(rawSampleData);
+      // const costMap = calculateGreenPortions(groupedByRegion);
+      // const groupedByRegion = sumByKey(assignedCost, 'region');
+      // const total = aggregateTotalCost(costMap);
+
     });
 
     test.todo("it totals up spend by month, comparing green vs grey spend")
