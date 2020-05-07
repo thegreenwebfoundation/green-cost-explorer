@@ -25,18 +25,32 @@ TODO:
 
 ### Usage
 
-This is a wrapper around the AWS NodeJS SDK, so by default, it looks for creds in your environment the way the AWS NodeJS normally does. However, you can also set following the environment variables to override these to try it out.
+#### Prerequisites
+
+- [Enable AWS Cost Explorer](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-enable.html): Simply opening AWS CostExplorer in the AWS console
+- An IAM user with CostExplorer read permissions
+
+#### AWS Credential access
+
+You can use `aws configure` to export keys as access, or manually export:
 
 ```
 AWS_ACCESS_KEY_ID='YOUR_KEY_ID'
 AWS_SECRET_ACCESS_KEY='YOUR_SECRET_ACCESS_KEY'
 ```
 
-Once you have this, call `greencost` to get an idea of your spend over the last year.
-
+This is a wrapper around the AWS NodeJS SDK, so by default, it looks for creds in your environment the way the AWS NodeJS normally does. However, you can also set following the environment variables to override these to try it out.
 It looks for the AWS credentials in your environment, but if you're not comfortable with this, the [AWS SDK lets you pass in credentials][creds] in number of ways.
 
 [creds]: https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html
+
+#### Usage
+
+```
+npx @tgwf/green-cost-explorer
+```
+
+If you have it installed and `npm link`-ed locally you can run:
 
 ```
 npx greencost

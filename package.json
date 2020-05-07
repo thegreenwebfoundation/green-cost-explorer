@@ -11,6 +11,10 @@
     "jest": "^24.8.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thegreenwebfoundation/green-cost-explorer.git"
+  },
   "scripts": {
     "test": "jest"
   },
