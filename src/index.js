@@ -223,6 +223,12 @@ function printDataByKey(costObject, key) {
 }
 
 async function runExplorer() {
+
+  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
+    console.log('Unable to locate credentials. Please export AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.');
+    return;
+  }
+
   const rawCost = await getRawCosts();
 
   const assignedCost = await getAssignedCost(rawCost);
