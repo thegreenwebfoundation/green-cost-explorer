@@ -21,6 +21,15 @@ const ceParams = {
     Start: startDate,
     End: endDate
   },
+  // TODO: Test whether this breaks summing if costs are split between credits/cash
+  Filter: {
+    Dimensions: {
+      Key: 'RECORD_TYPE',
+      Values: [
+        'Credit'
+      ],
+    }
+  },
   Granularity: 'MONTHLY',
   Metrics: [
     'BlendedCost',
@@ -47,6 +56,7 @@ async function getRawCosts() {
       if (err) {
         reject(err)
       }
+      console.log(JSON.stringify(data))
       resolve(data)
     })
   })
